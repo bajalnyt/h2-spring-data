@@ -1,6 +1,6 @@
 package com.mohbajal.h2springdata.service;
 
-import com.mohbajal.h2springdata.controllers.TestTable;
+import com.mohbajal.h2springdata.model.TestTable;
 import com.mohbajal.h2springdata.repository.TestTableRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class TestTableService {
     TestTableRepository testTableRepository;
 
     public List<TestTable> getAllData() {
-        return testTableRepository.findAll();
+        return testTableRepository.findAllByOrderByPriorityAsc();
     }
 
     public void updateData(TestTable tt, TestTable updatedTestTable) {

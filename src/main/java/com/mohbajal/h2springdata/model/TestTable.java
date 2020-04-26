@@ -1,4 +1,4 @@
-package com.mohbajal.h2springdata.controllers;
+package com.mohbajal.h2springdata.model;
 
 import javax.persistence.*;
 import java.util.Date;
